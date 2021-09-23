@@ -1,0 +1,475 @@
+/* ---------------GOOGLE FONT--------------- */
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* ----------------BASE------------------- */
+.section{
+    padding: 2rem 0 4rem;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    max-width: 768px;
+    max-width: 117rem;
+    margin: 0 auto;
+    padding: 0 1,5rem;
+}
+
+.section__title,
+.section__subtitle{
+    text-align: center;
+}
+
+.section__title{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+h2 {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.grid{
+    display: grid;
+    gap: 1.5rem;
+}
+
+/*--------------------------Hero------------------------*/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
+    url("../images/fondluckynail.jpg") center no-repeat;
+    background-size: cover;
+}
+
+.text{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+    text-align: center;
+}
+
+.text h1{
+    font-size: 20rem;
+    margin: 2rem 0;
+    font-family: 'Grey Qo', cursive;
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #333399,
+      0 0 82px #333399,
+      0 0 92px #333399,
+      0 0 102px #333399,
+      0 0 151px #333399;
+}
+
+.text h2{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.text p{
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+}
+
+.text{
+    font-size: 1.6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    color: #eee;
+    text-transform: uppercase;
+}
+
+
+/*-----------------------Nav-----------------------*/
+
+
+.menu-icons{
+    color: #eee;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1500;
+    display: none;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    height: 8rem;
+    border-bottom: 1px solid rgba(255,255,255, .1);
+    align-items: center;
+}
+
+
+.nav-list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list li {
+    line-height: 8rem;
+    position: relative;
+}
+
+.nav-list a {
+    display: block;
+    color: #eee;
+    padding: 0 1.5rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: color   650ms;
+}
+
+.nav-list a:hover{
+    color: #eb3007;
+}
+
+/* show menu */
+.show-menu{
+    top: 0;
+}
+
+
+/* ------------------BUTTON ANIMATION------------------ */
+.wrapper{
+
+    display: flex;
+    justify-content: center;
+}
+  
+.btn{
+    display: block;
+    width: 250px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #ff003b;
+    border: 2px solid #ff003b;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+  
+.btn span{
+    position: relative;
+    z-index: 2;
+}
+  
+.btn:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #333399;
+    transition: all .35s;
+}
+  
+.btn:hover{
+    color: #fff;
+}
+  
+.btn:hover:after{
+    width: 100%;
+}
+
+
+/* ------------------SALON------------------ */
+.salon__container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: auto;
+    gap: 4rem;
+    align-items: center;
+}
+
+
+
+.salon__description,
+.about__description{
+    color: #000000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+.salon{
+    background-color: #FDF8EA;
+    padding-bottom: 8rem;
+}
+
+.salon__img{
+    border: solid;
+    border-radius: 2rem;
+}
+
+
+/* ------------------TARIFS------------------ */
+.tarif__container{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+}
+.tarif__description__container{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    border-bottom: solid gray 1px;
+}
+
+.tarif__main,
+.tarif__pied,
+.tarif__epilations,
+.tarif__option{
+    background-color: pink;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.tarif__title{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+
+/* ------------------ABOUT------------------ */
+.about__container{
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    width: auto;
+    gap: 4rem;
+    text-align: center;
+    align-items: center;
+}
+
+.about__img{
+    border-radius: 2rem;
+}
+.salon__description,
+.about__description{
+    font-size: 2rem;
+}
+
+/* ------------------PHOTO------------------ */
+.photo__container{
+    overflow: initial;
+}
+
+.photo__content{
+    padding: 0 1.5rem;
+}
+
+
+.photo__img{
+    width: 750px;
+    border-radius: .5rem;
+    justify-self: center;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    content: '';
+}
+
+.swiper-portfolio-icon{
+    font-size: 10rem;
+    color: pink;
+}
+
+.swiper-button-prev{
+    left: -.5rem;
+}
+
+.swiper-button-next{
+    right: -.5rem;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -2.5rem;
+    left: 0;
+    width: 100%;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: red;
+}
+
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullets{
+    outline: none;
+}
+
+
+/* ------------------CONTACT------------------ */
+.contact{
+    background-color: #FDF8EA;
+}
+.contact__container{
+    text-align: center;
+}
+
+.contact__icon{
+    font-size: 5rem;
+    color: rgb(253, 115, 138);
+}
+
+.contact__description{
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+}
+
+
+/* ------------------FOOTER------------------ */
+.footer{
+    background-color: gray;
+    height: auto
+}
+
+
+.footer__copy{
+    color: white;
+}
+
+
+/* -----------------SMALL SCREEN----------------------- */
+@media screen and (max-width: 850px){
+    .nav-list{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 50vh;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #191919;
+        z-index: 1000;
+    }
+    .nav-list > li {
+        line-height: 6rem;
+        border-bottom: .5px solid #ff003b;
+    }
+
+    .menu-icons{
+        display: block;
+    }
+
+    .ion-md-close{
+        display: none;
+    }
+
+    nav.active .ion-md-close{
+        display: block;
+    }
+
+    nav.active .ion-md-menu{
+        display: none;
+    }
+
+    nav.active .nav-list{
+        display: flex;
+    }
+
+    .text h1{
+        font-size: 12rem;
+    }
+
+    .salon__container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about__container{
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .tarif__container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .swiper-portfolio-icon{
+        font-size: 5rem;
+        color: pink;
+    }
+
+    .swiper-button-next{
+        padding-top: 15rem;
+        padding-right: 2rem;
+    }
+
+    .swiper-button-prev{
+        padding-top: 15rem;
+        padding-left: 2rem;
+    }
+}
+
+
+
