@@ -1,6 +1,7 @@
 /* ---------------GOOGLE FONT--------------- */
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 /* ----------------BASE------------------- */
 .section{
     padding: 2rem 0 4rem;
@@ -37,7 +38,6 @@ header{
 
 .container{
     max-width: 768px;
-    max-width: 117rem;
     margin: 0 auto;
     padding: 0 1,5rem;
 }
@@ -72,7 +72,7 @@ img{
 
 /*--------------------------Hero------------------------*/
 .hero{
-    width: 100%;
+    width: auto;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
     url("images/fondluckynail.jpg") center no-repeat;
@@ -235,6 +235,7 @@ nav{
     width: auto;
     gap: 4rem;
     align-items: center;
+    max-width: 60%;
 }
 
 
@@ -252,8 +253,9 @@ nav{
 }
 
 .salon{
-    background-color: #FDF8EA;
+    background-color: #fff;
     padding-bottom: 8rem;
+    
 }
 
 .salon__img{
@@ -265,8 +267,9 @@ nav{
 /* ------------------TARIFS------------------ */
 .tarif__container{
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem;
+    padding: 0 10rem 0 10rem;
 }
+
 .tarif__description__container{
     display: flex;
     margin-left: auto;
@@ -290,9 +293,20 @@ nav{
     font-size: 2.5rem;
 }
 
+.tarif__subtitle{
+    font-size: 1.5rem;
+}
+
 
 /* ------------------ABOUT------------------ */
+.salon,
+.tarif,
+.photo,
+.about{
+    background-color: beige;
+}
 .about__container{
+    max-width: 60%;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
     width: auto;
@@ -336,11 +350,11 @@ nav{
 }
 
 .swiper-button-prev{
-    left: -.5rem;
+    left: -5.5rem;
 }
 
 .swiper-button-next{
-    right: -.5rem;
+    right: -5.5rem;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -362,19 +376,29 @@ nav{
 
 /* ------------------CONTACT------------------ */
 .contact{
-    background-color: #FDF8EA;
+    background-color: rgb(250, 250, 152);
+    justify-content: center;
+    align-items: center;text-align: center;
+    
 }
 .contact__container{
+    grid-template-columns: repeat(2, 1fr);
     text-align: center;
+    max-width: 100%;
+    gap: 6rem;
+}
+
+.map__detail{
+    border-radius: 2rem;
 }
 
 .contact__icon{
     font-size: 5rem;
-    color: rgb(253, 115, 138);
+    color: rgb(252, 36, 72);
 }
 
 .contact__description{
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Rubik';
     font-size: 30px;
     line-height: 45px;
     letter-spacing: 0px;
@@ -383,16 +407,27 @@ nav{
     text-transform: none;
 }
 
-
-/* ------------------FOOTER------------------ */
-.footer{
-    background-color: gray;
-    height: auto
+.contact__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
+/* ------------------FOOTER------------------ */
+.footer{
+
+    background-color: darkgray;
+    height: auto
+}
+
+.footer__bg{
+    text-align: center;
+}
+
 .footer__copy{
-    color: white;
+    color: black;
 }
 
 
@@ -453,6 +488,7 @@ nav{
     .tarif__container{
         display: flex;
         flex-direction: column;
+        padding: 0 0 0 0;
     }
 
     .swiper-portfolio-icon{
@@ -460,14 +496,24 @@ nav{
         color: pink;
     }
 
-    .swiper-button-next{
-        padding-top: 15rem;
-        padding-right: 2rem;
+    .swiper-button-next,
+    .swiper-button-prev{
+        display: none;
     }
 
-    .swiper-button-prev{
-        padding-top: 15rem;
-        padding-left: 2rem;
+    .contact__container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .map__detail{
+        height: auto;
+        width: auto;
+    }
+
+    .contact__description{
+        font-size: 20px;
     }
 }
 
