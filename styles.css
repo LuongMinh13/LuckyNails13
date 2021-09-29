@@ -459,6 +459,10 @@ header.sticky ul li a{
         border-bottom: .5px solid #ff003b;
     }
 
+    .nav-list li a {
+        color: #eee;
+    }
+
     .menu-icons{
         display: block;
         color: black;
