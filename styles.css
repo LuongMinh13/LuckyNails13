@@ -529,6 +529,11 @@ header.sticky ul li a{
     .contact__description{
         font-size: 20px;
     }
+
+    header.sticky i {
+        color: white;
+        transition: 0.5s;
+    }
 }
 
 
